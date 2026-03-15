@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Việt Khánh | CTY TNHH TM - DV Xăng dầu</title>
+    <style>
+        /* === RESET & CƠ BẢN === */
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #f8f9fa;
+            --text-color: #333;
+            --light-text: #666;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html { scroll-behavior: smooth; }
+        body { color: var(--text-color); line-height: 1.6; background-color: var(--secondary-color); }
+        
+        /* === HEADER & ĐIỀU HƯỚNG === */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-color); text-decoration: none; }
+        .nav-links { list-style: none; display: flex; gap: 20px; }
+        .nav-links a { text-decoration: none; color: var(--text-color); font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary-color); }
+
+        /* === HERO SECTION === */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1580982319985-1ce11fba899a?auto=format&fit=crop&q=80&w=1920') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 3rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 2px; }
+        .hero p { font-size: 1.2rem; max-width: 600px; }
+
+        /* === BỐ CỤC CHUNG CÁC SECTION === */
+        section { padding: 80px 5%; max-width: 1200px; margin: auto; }
+        section h2 { 
+            text-align: center; 
+            font-size: 2.2rem; 
+            color: var(--primary-color); 
+            margin-bottom: 40px; 
+            position: relative;
+        }
+        section h2::after {
+            content: ''; width: 60px; height: 4px; background: var(--primary-color);
+            position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+        }
+
+        /* === THƯ NGỎ & GIỚI THIỆU === */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white; padding: 30px; border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-5px); }
+        .letter-content { font-style: italic; color: var(--light-text); border-left: 4px solid var(--primary-color); padding-left: 15px; }
+
+        /* === CÔNG TRÌNH ĐÃ LÀM === */
+        .projects-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
+        }
+        .project-item {
+            background: white; padding: 20px; border-radius: 8px; border-top: 4px solid var(--primary-color);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        .project-item h3 { color: var(--primary-color); margin-bottom: 10px; }
+
+        /* === LIÊN HỆ & FOOTER === */
+        .contact-info { text-align: center; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .contact-info p { margin-bottom: 10px; font-size: 1.1rem; }
+        footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .nav-links { display: none; /* Rút gọn trên mobile cho đơn giản */ }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">VIỆT KHÁNH</a>
+            <ul class="nav-links">
+                <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                <li><a href="#thu-ngo">Thư ngỏ</a></li>
+                <li><a href="#nhan-su">Năng lực</a></li>
+                <li><a href="#cong-trinh">Công trình</a></li>
+                <li><a href="#lien-he">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Công ty TNHH TM - DV Xăng dầu Việt Khánh</h1>
+        <p>Uy tín - Chất lượng - An toàn - Hiệu quả. Đối tác tin cậy trong lĩnh vực xăng dầu và xây dựng công nghiệp.</p>
+    </div>
+
+    <section id="gioi-thieu">
+        <h2>Về Chúng Tôi</h2>
+        <div class="card-container">
+            <div class="card">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Giới thiệu chung</h3>
+                <p>Công ty TNHH TM - DV Xăng dầu Việt Khánh tự hào là đơn vị uy tín hoạt động trong lĩnh vực cung cấp dịch vụ, thiết kế, thi công và giám sát các công trình xăng dầu. Với phương châm "An toàn là trên hết", chúng tôi luôn cam kết mang lại những giá trị bền vững cho đối tác và khách hàng.</p>
+            </div>
+            <div class="card" id="thu-ngo">
+                <h3 style="color: var(--primary-color); margin-bottom: 15px;">Thư ngỏ</h3>
+                <p class="letter-content">"Kính gửi Quý khách hàng và Đối tác! Lời đầu tiên, Việt Khánh xin gửi lời chào trân trọng nhất. Trong bối cảnh phát triển mạnh mẽ của ngành công nghiệp năng lượng, chúng tôi luôn không ngừng nỗ lực nâng cao năng lực để đáp ứng mọi yêu cầu khắt khe nhất. Sự tin tưởng của quý vị là tài sản lớn nhất của chúng tôi."</p>
+                <p style="text-align: right; margin-top: 10px; font-weight: bold;">- Giám đốc Công ty</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="nhan-su" style="background-color: white; max-width: 100%; padding: 80px 5%;">
+        <div style="max-width: 1200px; margin: auto;">
+            <h2>Năng Lực Cốt Lõi</h2>
+            <div class="card-container">
+                <div class="card" style="background: var(--secondary-color);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">👥 Đội ngũ Nhân sự</h3>
+                    <p>Chúng tôi sở hữu đội ngũ kỹ sư, chuyên gia và công nhân lành nghề, giàu kinh nghiệm thực tế. Từng cá nhân đều được đào tạo bài bản về an toàn lao động, phòng cháy chữa cháy và kỹ thuật chuyên ngành xăng dầu.</p>
+                </div>
+                <div class="card" style="background: var(--secondary-color);">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">⚙️ Trang Thiết bị</h3>
+                    <p>Việt Khánh đầu tư mạnh mẽ vào hệ thống máy móc, thiết bị thi công hiện đại, đáp ứng các tiêu chuẩn kỹ thuật quốc tế và quy chuẩn Việt Nam, đảm bảo tiến độ thi công nhanh chóng và an toàn tuyệt đối.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cong-trinh">
+        <h2>Dự Án & Kinh Nghiệm</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <h3>📝 Đấu thầu</h3>
+                <p>Tham gia và trúng thầu nhiều dự án cung cấp vật tư, lắp đặt trạm xăng dầu quy mô lớn cho các tổng công ty nhà nước và tư nhân.</p>
+            </div>
+            <div class="project-item">
+                <h3>🏗️ Thi công</h3>
+                <p>Trực tiếp thi công hàng chục cửa hàng bán lẻ xăng dầu, kho chứa nhiên liệu đảm bảo tiêu chuẩn PCCC khắt khe nhất.</p>
+            </div>
+            <div class="project-item">
+                <h3>🔍 Giám sát</h3>
+                <p>Cung cấp dịch vụ giám sát chất lượng công trình xăng dầu, đảm bảo nhà thầu thi công đúng bản vẽ và tiêu chuẩn kỹ thuật.</p>
+            </div>
+            <div class="project-item">
+                <h3>📐 Thiết kế</h3>
+                <p>Thiết kế công nghệ, thiết kế bản vẽ thi công trạm xăng, hệ thống đường ống công nghệ, bể chứa đạt chuẩn an toàn môi trường.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lien-he">
+        <h2>Thông Tin Liên Hệ</h2>
+        <div class="contact-info">
+            <h3 style="margin-bottom: 20px; color: var(--primary-color);">CÔNG TY TNHH TM - DV XĂNG DẦU VIỆT KHÁNH</h3>
+            <p><strong>📍 Địa chỉ:</strong> [Điền địa chỉ công ty vào đây]</p>
+            <p><strong>📞 Điện thoại:</strong> [Điền số điện thoại]</p>
+            <p><strong>📧 Email:</strong> [Điền email liên hệ]</p>
+            <p><strong>🌐 Website:</strong> www.vietkhanhpetro.com</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Công ty TNHH TM - DV Xăng dầu Việt Khánh. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
